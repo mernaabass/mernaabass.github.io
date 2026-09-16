@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Merna Abass — AI Engineer & Cross-Platform Developer. Merging Machine Learning with scalable mobile, desktop, and web applications." />
+  <meta name="author" content="Merna Khaled Abass" />
+  <meta name="theme-color" content="#071c24" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,501,401,901,400,2&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicon — custom logo image (place logo.png in /images/ folder) -->
+  <link rel="icon" type="image/png" sizes="any" href="images/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("c4dUjenkU1anSFnZQ");
+    })();
+  </script>
+
+  <title>Merna Abass | AI Engineer &amp; Cross-Platform Developer</title>
+</head>
+<body>
+
+  <!-- ==================== Loading Screen ==================== -->
+  <div class="loading-container" id="loader">
+    <div class="spinner">
+      <div class="spinner-inner"></div>
+    </div>
+  </div>
+
+  <!-- ==================== Scroll-to-Top ==================== -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ==================== Navigation Overlay (mobile) ==================== -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ==================== Header ==================== -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="#hero">M<span>A</span></a>
+      </div>
+
+      <div class="burger-icon" id="burgerIcon" aria-label="Toggle navigation">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#education">EDUCATION</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#achievements">ACHIEVEMENTS</a></li>
+        </ul>
+        <a href="#contact" class="nav-cta">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== 1. Hero / Cover Section ==================== -->
+  <section id="hero">
+    <div class="hero-container container">
+      <div class="hero-info">
+        <span class="hero-label">Open to Opportunities</span>
+        <h1 class="hero-title hero-statement" style="font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.25; word-break: normal;">
+          Intelligence Isn't Artificial<br>
+          When It's Built Right.
+        </h1>
+        <p class="hero-tagline">AI Engineer &amp; Tech Co-Founder | Merging Machine Learning and Cross-Platform Engineering to Build Scalable, Real-World Solutions</p>
+
+        <div class="hero-buttons">
+          <a href="https://drive.google.com/file/d/1oMrAHFVUyuFPZiG0b8sB6EzqNRtn8nO_/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> View CV
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <i class="fa-solid fa-diagram-project"></i> View Projects
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat" data-target="20" data-suffix="+">
+            <h3>0</h3>
+            <p>Engineered Projects</p>
+          </div>
+          <div class="hero-stat" data-target="90" data-suffix="+">
+            <h3>0</h3>
+            <p>Active Users (Lumeria)</p>
+          </div>
+          <div class="hero-stat" data-target="4" data-suffix="+">
+            <h3>0</h3>
+            <p>Industry Internships</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="hero-photo-wrapper">
+          <img src="images/profile.jpg" alt="Merna Abass - AI Engineer &amp; Cross-Platform Developer" class="hero-photo" />
+        </div>
+        <div class="hero-photo-badge">
+          <span>AI &amp; Mobile Engineer</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. About Section ==================== -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+
+      <div class="about-container">
+        <div class="about-text">
+          <h3>Who am I?</h3>
+          <p>
+            AI Engineer and Tech Co-Founder specializing in designing, training, and deploying end-to-end intelligent systems. I graduated with a Bachelor's degree in Artificial Intelligence from <strong>Delta University for Science and Technology</strong> with <strong>Very Good with Honors (CGPA: 3.625)</strong>. Currently, I am expanding my production-grade AI expertise as a <strong>Microsoft Machine Learning Engineer Trainee</strong> in the <strong>Digital Egypt Pioneers Initiative (DEPI)</strong>, focusing on Azure AI workflows, NLP attention models, and MLOps.
+          </p>
+          <p>
+            My core strength lies in bridging complex algorithmic backends with responsive, user-friendly client interfaces. As Co-Founder and AI Engineer of <strong>Lumeria</strong>, our graduation project achieved an <strong>A+ grade</strong> and successfully transitioned into a live production venture launched on the Google Play Store. I built Arabic RAG retrieval systems with LangChain and FAISS, engineered multi-model recommendation engines, deployed low-latency REST APIs using FastAPI, and developed mobile interfaces with Flutter and Supabase.
+          </p>
+          <p>
+            Beyond technical architecture, I actively advocate for technology and community leadership. In my freshman year, I was awarded the <strong>Delta University Shield</strong> after delivering the opening keynote for the COP27-aligned AI Climate Innovation Competition among 87 competing teams addressing sustainability challenges. I have served as the Official Stage Presenter for university scientific days and job fairs, while serving as Head of the Voice Over Committee at AI Pioneers and Content Writer for GDG on Campus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3. Education Section ==================== -->
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+
+      <div class="education-card reveal">
+        <div class="education-icon">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="education-info">
+          <h3>Delta University for Science and Technology</h3>
+          <h4>Bachelor of Artificial Intelligence</h4>
+          <div class="edu-meta">
+            <span><i class="fa-solid fa-chart-line"></i> CGPA: 3.625 (Very Good with Honors)</span>
+            <span><i class="fa-regular fa-calendar"></i> October 2022 – June 2026</span>
+            <span><i class="fa-solid fa-location-dot"></i> Mansoura , Egypt</span>
+          </div>
+
+          <div class="education-grad-project">
+            <h5>🏆 Graduation Project: Lumeria — Grade: A+</h5>
+            <p>An intelligent Egyptian tourism ecosystem combining Arabic RAG pipelines, multi-model landmark recommendation engines, interactive Flutter mobile interfaces, and real-time Supabase cloud infrastructure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. Skills Section ==================== -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">A comprehensive engineering stack spanning machine learning, natural language processing, and cross-platform product deployment.</p>
+
+      <div class="skills-grid stagger-children">
+        <!-- Machine Learning & Deep Learning -->
+        <div class="skill-category reveal" style="--stagger-index:0">
+          <h3><i class="fa-solid fa-brain"></i> Machine Learning &amp; Deep Learning</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">CNN &amp; Bi-LSTM</span>
+            <span class="skill-tag">Keras</span>
+            <span class="skill-tag">Model Fine-Tuning</span>
+            <span class="skill-tag">Feature Engineering</span>
+            <span class="skill-tag">Pandas &amp; NumPy</span>
+          </div>
+        </div>
+
+        <!-- NLP & Generative AI -->
+        <div class="skill-category reveal" style="--stagger-index:1">
+          <h3><i class="fa-solid fa-comments"></i> NLP &amp; Generative AI</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Arabic RAG Systems</span>
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">FAISS Vector Search</span>
+            <span class="skill-tag">Google Gemini API</span>
+            <span class="skill-tag">RoBERTa &amp; BERT</span>
+            <span class="skill-tag">Hugging Face</span>
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">NLTK &amp; SpaCy</span>
+          </div>
+        </div>
+
+        <!-- Cross-Platform & Backend -->
+        <div class="skill-category reveal" style="--stagger-index:2">
+          <h3><i class="fa-solid fa-mobile-screen-button"></i> Cross-Platform &amp; Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Flutter &amp; Dart</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Flet (Python UI)</span>
+            <span class="skill-tag">Flask &amp; Node.js</span>
+            <span class="skill-tag">Supabase (Auth &amp; DB)</span>
+            <span class="skill-tag">PostgreSQL &amp; MySQL</span>
+            <span class="skill-tag">RESTful APIs</span>
+          </div>
+        </div>
+
+        <!-- Tools & Computer Vision -->
+        <div class="skill-category reveal" style="--stagger-index:3">
+          <h3><i class="fa-solid fa-wrench"></i> Cloud, Vision &amp; Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Microsoft Azure AI</span>
+            <span class="skill-tag">Google ML Kit (OCR/Barcode)</span>
+            <span class="skill-tag">Git &amp; GitHub</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Figma (UI/UX)</span>
+            <span class="skill-tag">MLflow</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills & Leadership -->
+        <div class="skill-category reveal" style="--stagger-index:4">
+          <h3><i class="fa-solid fa-users"></i> Leadership &amp; Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Keynote Speaking</span>
+            <span class="skill-tag">Official Stage Hosting</span>
+            <span class="skill-tag">Voice-Over Narration</span>
+            <span class="skill-tag">Technical Writing</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Cross-Team Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. Work Experience Section ==================== -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="timeline">
+        <!-- Position 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Microsoft Machine Learning Engineer Trainee</h3>
+                <p class="company">Digital Egypt Pioneers Initiative (DEPI) — Hybrid</p>
+              </div>
+              <span class="duration">Jul 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Utilizing Microsoft Azure to translate raw data pipelines into scalable Machine Learning and Data Science architectures.</li>
+              <li>Developing practical expertise in Prompt Engineering, MLOps workflows (MLflow, Hugging Face), NLP with Attention Models, and Computer Vision.</li>
+              <li>Collaborating on production-ready deployments integrating end-to-end model evaluation and monitoring pipelines.</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>Microsoft Azure</span>
+              <span>MLOps</span>
+              <span>Prompt Engineering</span>
+              <span>Computer Vision</span>
+              <span>Transformers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Position 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Machine Learning Intern</h3>
+                <p class="company">Elevvo Pathways — Virtual Training</p>
+              </div>
+              <span class="duration">Sep 2025</span>
+            </div>
+            <ul>
+              <li>Developed diverse Machine Learning solutions including a Collaborative Filtering Movie Recommendation System and a CNN-based Traffic Sign Classifier.</li>
+              <li>Applied K-Means clustering for customer segmentation and executed end-to-end data preprocessing pipelines.</li>
+              <li>Benchmarked model performances and optimized hyper-parameters across classification tasks.</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>Recommendation Systems</span>
+              <span>CNNs</span>
+              <span>K-Means</span>
+              <span>Data Preprocessing</span>
+              <span>Scikit-Learn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Position 3 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Artificial Intelligence Trainee</h3>
+                <p class="company">Information Technology Institute (ITI) — Virtual Training</p>
+              </div>
+              <span class="duration">Aug 2025</span>
+            </div>
+            <ul>
+              <li>Completed an intensive 90-hour specialized training covering end-to-end Machine Learning pipeline architectures.</li>
+              <li>Executed an 18-hour practical capstone project applying applied mathematics and AI techniques to solve real-world problems.</li>
+              <li>Trained linear models, ensemble trees, and deep neural nets with robust cross-validation methods.</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>Applied Math</span>
+              <span>Machine Learning</span>
+              <span>Model Evaluation</span>
+              <span>Python</span>
+              <span>Supervised Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Position 4 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Digital Transformation &amp; Business Skills Intern</h3>
+                <p class="company">Commercial International Bank (CIB) — Virtual</p>
+              </div>
+              <span class="duration">Aug 2024</span>
+            </div>
+            <ul>
+              <li>Completed an intensive program focused on Digital Transformation, Data Literacy (in collaboration with SAS), and Cybersecurity &amp; Data Privacy.</li>
+              <li>Developed essential entrepreneurial and human-centric interpersonal skills through modules with Frankfurt School and LinkedIn.</li>
+              <li>Applied agile problem-solving strategies to real-world corporate banking case studies.</li>
+            </ul>
+            <div class="timeline-skills">
+              <span>Digital Transformation</span>
+              <span>Data Literacy (SAS)</span>
+              <span>Cybersecurity</span>
+              <span>Business Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. Services Section ==================== -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-subtitle">Comprehensive engineering capabilities — from AI model training to cross-platform application deployment.</p>
+
+      <div class="services-grid stagger-children">
+        <div class="service-card reveal" style="--stagger-index:0">
+          <div class="service-number">01</div>
+          <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3>AI &amp; Machine Learning Engineering</h3>
+          <ul>
+            <li>Custom Supervised and Deep Learning model development</li>
+            <li>Multi-model Recommendation Engines (Collaborative &amp; Content-Based)</li>
+            <li>Computer Vision classification and real-time detection systems</li>
+            <li>Data preprocessing, feature engineering, and performance optimization</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" style="--stagger-index:1">
+          <div class="service-number">02</div>
+          <div class="service-icon"><i class="fa-solid fa-comments"></i></div>
+          <h3>Generative AI &amp; NLP Systems</h3>
+          <ul>
+            <li>Arabic Context-Aware RAG (Retrieval-Augmented Generation) architectures</li>
+            <li>FAISS Vector Database indexing and semantic embeddings</li>
+            <li>Sentiment Analysis fine-tuning using Transformer backbones (RoBERTa)</li>
+            <li>Google Gemini API integrations for intelligent chatbots</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" style="--stagger-index:2">
+          <div class="service-number">03</div>
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>Cross-Platform Mobile &amp; Web Apps</h3>
+          <ul>
+            <li>End-to-end Flutter mobile app development (Android &amp; iOS)</li>
+            <li>Responsive desktop and dashboard applications using Python Flet</li>
+            <li>Modern, dark-aesthetic UI/UX designs prototyped in Figma</li>
+            <li>Real-time database and secure auth integration via Supabase</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" style="--stagger-index:3">
+          <div class="service-number">04</div>
+          <div class="service-icon"><i class="fa-solid fa-server"></i></div>
+          <h3>API Development &amp; Cloud Deployment</h3>
+          <ul>
+            <li>High-performance, low-latency REST APIs using FastAPI</li>
+            <li>Microservice backends for serving real-time model inference</li>
+            <li>Model hosting on Hugging Face Spaces and cloud environments</li>
+            <li>Docker containerization and Git version-controlled workflows</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal" style="--stagger-index:4">
+          <div class="service-number">05</div>
+          <div class="service-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+          <h3>Technical Presentation &amp; Voice-Over</h3>
+          <ul>
+            <li>Keynote speaking for technical summits and scientific competitions</li>
+            <li>Stage hosting and moderation for academic and professional events</li>
+            <li>Voice-over narration for promotional videos and product launches</li>
+            <li>Technical writing and developer content curation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. Projects Section ==================== -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Hand-picked engineering solutions showcasing intelligent algorithms, RAG pipelines, and cross-platform apps.</p>
+
+      <div class="projects-grid stagger-children">
+        <!-- Project 1: Lumeria -->
+        <div class="project-card reveal" style="--stagger-index:0">
+          <div class="project-image">
+            <img src="images/projects/project-01-lumeria.png" alt="Lumeria - Egyptian Tourism Smart Ecosystem" loading="lazy">
+          </div>
+          <div class="project-card-header">
+            <span class="project-type">Graduation Project — Grade: A+ | Production App</span>
+            <div class="project-badge">🚀 Launched on Google Play</div>
+            <h3>Lumeria — AI-Powered Tourism Ecosystem</h3>
+            <p class="project-duration"><i class="fa-solid fa-rocket"></i> Oct 2025 – Present &bull; Co-Founder &amp; Mobile & AI Engineer</p>
+          </div>
+          <div class="project-card-body">
+            <p>A comprehensive Egyptian tourism mobile application engineered to assist travelers through intelligent algorithms. Incorporates RAG chatbot, multi-model recommendations, immersive Augmented Reality (AR) &amp; 3D visualizations, and interactive location intelligence.</p>
+            <ul class="project-highlights">
+              <li>Designed the UI/UX architecture and built core <strong>Flutter</strong> mobile interfaces and interactive location services.</li>
+              <li>Architected the backend and database infrastructure using <strong>Supabase (PostgreSQL)</strong> with OAuth authentication and real-time user data sync.</li>
+              <li>Developed personalized recommendation algorithms using <strong>Collaborative Filtering</strong> and <strong>Popularity-based</strong> scoring models.</li>
+              <li>Fine-tuned a <strong>RoBERTa</strong> transformer model for sentiment analysis and deployed microservices via <strong>FastAPI</strong>, <strong>Docker</strong>, and <strong>Hugging Face</strong>.</li>
+            </ul>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tools">
+              <span>Flutter</span>
+              <span>FastAPI</span>
+              <span>Supabase</span>
+              <span>LangChain</span>
+              <span>FAISS</span>
+              <span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="https://play.google.com/store/apps/details?id=app.lumeria.egypt" target="_blank" rel="noopener noreferrer" class="btn-github" aria-label="Google Play Store">
+                <i class="fa-brands fa-google-play"></i> Google Play
+              </a>
+              <a href="https://www.youtube.com/watch?v=YvIjp601DgU" target="_blank" rel="noopener noreferrer" class="btn-linkedin" aria-label="Watch Demo on YouTube">
+                <i class="fa-brands fa-youtube"></i> Watch Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: RAG Tourism Chatbot -->
+        <div class="project-card reveal" style="--stagger-index:1">
+          <div class="project-image">
+            <img src="images/projects/project-02-ryla.jpeg" alt="RAG-Powered AI Tourism Chatbot" loading="lazy">
+          </div>
+          <div class="project-card-header">
+            <span class="project-type">Generative AI &amp; NLP</span>
+            <div class="project-badge">⚡ Sub-Second Retrieval</div>
+            <h3>RAG-Powered Arabic Tourism Chatbot</h3>
+            <p class="project-duration"><i class="fa-solid fa-gears"></i> Architecture &amp; Production Deployment</p>
+          </div>
+          <div class="project-card-body">
+            <p>Engineered an Arabic RAG backend utilizing LangChain, Gemini API, and FAISS vector database with Hugging Face embeddings for accurate, context-aware Egyptian tourism queries.</p>
+            <ul class="project-highlights">
+              <li>Semantic text chunking and vector indexing of cultural Egyptian landmark databases.</li>
+              <li>Deployed as a scalable REST API via <strong>FastAPI on Hugging Face Spaces</strong>.</li>
+              <li>Seamless real-time integration into mobile clients with minimal latency.</li>
+            </ul>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tools">
+              <span>LangChain</span>
+              <span>FAISS</span>
+              <span>FastAPI</span>
+              <span>Hugging Face</span>
+              <span>Gemini API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/1S3Vm10km9iCJTAbHVzGi5w0KB562BmMW/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-drive" aria-label="Ryla Demo Video">
+                <i class="fa-brands fa-google-drive"></i> Watch Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Driver Drowsiness Detection -->
+        <div class="project-card reveal" style="--stagger-index:2">
+          <div class="project-image">
+            <img src="images/projects/project-03-driver.jpg" alt="Driver Drowsiness Detection System" loading="lazy">
+          </div>
+          <div class="project-card-header">
+            <span class="project-type">Deep Learning &amp; Computer Vision</span>
+            <div class="project-badge">🎯 99.23% Accuracy</div>
+            <h3>Driver Drowsiness Detection System</h3>
+            <p class="project-duration"><i class="fa-solid fa-microchip"></i> Deep Learning &amp; AI Safety Solution</p>
+          </div>
+          <div class="project-card-body">
+            <p>Designed and trained a hybrid spatio-temporal deep learning model combining CNNs and Bidirectional LSTMs to analyze 16-frame video sequences for driver safety.</p>
+            <ul class="project-highlights">
+              <li>Custom PyTorch DataLoaders built for a dataset containing <strong>41,000+ images</strong>.</li>
+              <li>Spatio-temporal feature extraction capturing subtle temporal facial fatigue cues.</li>
+              <li>Achieved <strong>99.23% testing accuracy</strong> with optimized inference parameters.</li>
+            </ul>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tools">
+              <span>PyTorch</span>
+              <span>CNN</span>
+              <span>Bi-LSTM</span>
+              <span>Computer Vision</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/mernaabass/AI424-Deep-Learning/tree/main/Driver-Drowsiness-Detection-CNN-LSTM" target="_blank" rel="noopener noreferrer" class="btn-github" aria-label="GitHub Repository">
+                <i class="fa-brands fa-github"></i> View Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: EnviLens -->
+        <div class="project-card reveal" style="--stagger-index:3">
+          <div class="project-image">
+            <img src="images/projects/project-04-envilens.jpeg" alt="EnviLens Sustainable Product Analyzer" loading="lazy">
+          </div>
+          <div class="project-card-header">
+            <span class="project-type">Gemini API Developer Competition</span>
+            <div class="project-badge">🌱 Sustainability AI</div>
+            <h3>EnviLens — Sustainable Product Analyzer</h3>
+            <p class="project-duration"><i class="fa-solid fa-leaf"></i> Computer Vision &amp; Generative AI Assistant</p>
+          </div>
+          <div class="project-card-body">
+            <p>Developed for the Gemini API Developer Competition, integrating Gemini-1.5-Flash and computer vision tools to evaluate environmental sustainability of consumer products.</p>
+            <ul class="project-highlights">
+              <li>Integrated <strong>Google ML Kit</strong> for real-time barcode scanning and OCR text recognition.</li>
+              <li>Backend product categorization and impact scoring via Node.js and MySQL.</li>
+              <li>AI-powered interactive assistant delivering sustainability tips.</li>
+            </ul>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tools">
+              <span>Gemini API</span>
+              <span>Google ML Kit</span>
+              <span>Flutter</span>
+              <span>Node.js</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-links" style="display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;">
+              <a href="https://github.com/mernaabass/EnviLens" target="_blank" rel="noopener noreferrer" class="btn-github" aria-label="GitHub Repository">
+                <i class="fa-brands fa-github"></i> View Code
+              </a>
+              <a href="https://ai.google.dev/competition/projects/envilens" target="_blank" rel="noopener noreferrer" class="btn-github" aria-label="Google Competition Project">
+                <i class="fa-brands fa-google"></i> Competition
+              </a>
+              <a href="https://www.youtube.com/watch?v=dnqTWwx2bxI" target="_blank" rel="noopener noreferrer" class="btn-linkedin" aria-label="Watch Demo on YouTube">
+                <i class="fa-brands fa-youtube"></i> Watch Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: SafeHaven -->
+        <div class="project-card reveal" style="--stagger-index:4">
+          <div class="project-image">
+            <img src="images/projects/project-05-safehaven.jpeg" alt="SafeHaven AI &amp; IoT-Based Elderly Care System" loading="lazy">
+          </div>
+          <div class="project-card-header">
+            <span class="project-type">Award Winner — IEEE ITC-Egypt 2025</span>
+            <div class="project-badge">🏅 Outstanding Award</div>
+            <h3>SafeHaven — AI &amp; IoT Elderly Care System</h3>
+            <p class="project-duration"><i class="fa-solid fa-heart-pulse"></i> Smart Healthcare &amp; IoT System</p>
+          </div>
+          <div class="project-card-body">
+            <p>A smart assistive healthcare ecosystem integrating artificial intelligence and IoT sensors to monitor and enhance the safety of senior citizens.</p>
+            <ul class="project-highlights">
+              <li>Arabic desktop and mobile application created with <strong>Python Flet</strong>.</li>
+              <li>Real-time automated fall detection alerts and caregiver synchronization.</li>
+              <li>Cloud architecture managed through <strong>Supabase</strong> for patient records.</li>
+              <li>Won the <strong>Outstanding Performance Award</strong> at IEEE ITC-Egypt 2025.</li>
+            </ul>
+          </div>
+          <div class="project-card-footer">
+            <div class="project-tools">
+              <span>Python (Flet)</span>
+              <span>IoT</span>
+              <span>Supabase</span>
+              <span>Sensors</span>
+            </div>
+            <div class="project-links" style="display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;">
+              <a href="https://drive.google.com/file/d/1juxWOuj3QmYnTJ4Ce0t-n_Faw2Bx96E6/view" target="_blank" rel="noopener noreferrer" class="btn-drive" aria-label="SafeHaven Demo Video">
+                <i class="fa-brands fa-google-drive"></i> Watch Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. Achievements Section ==================== -->
+  <section id="achievements">
+    <div class="container">
+      <h2 class="section-title">Achievements &amp; Leadership</h2>
+
+      <div class="achievements-grid stagger-children">
+        <!-- Delta Shield -->
+        <div class="achievement-card reveal" style="--stagger-index:0" data-achievement="cop27">
+          <div class="achievement-header">
+            <div class="achievement-icon">🛡️</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/delta-shield.jpg');" onclick="openGallery('cop27', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/presented.jpg');" onclick="openGallery('cop27', 1)"></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Keynote Speaker &amp; Delta University Shield</h4>
+            <p class="achievement-org">AI Climate Innovation Competition (COP27-aligned)</p>
+            <p class="achievement-date">2022</p>
+            <p class="achievement-detail">Honored with the prestigious <strong>Delta University Shield</strong> after delivering the official opening keynote address among 87 competing teams addressing sustainability challenges.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('cop27', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- SafeHaven Award -->
+        <div class="achievement-card reveal" style="--stagger-index:1" data-achievement="safehaven">
+          <div class="achievement-header">
+            <div class="achievement-icon">🏆</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_SafeHaven_Certificate%20ITC%202025.jpeg');" onclick="openGallery('safehaven', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/2_SafeHaven.jpg');" onclick="openGallery('safehaven', 1)"></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Outstanding Performance Award — 'SafeHaven'</h4>
+            <p class="achievement-org">IEEE ITC-Egypt 2025</p>
+            <p class="achievement-date">2025</p>
+            <p class="achievement-detail">Recognized for technical excellence and practical social impact in elderly care engineering, combining IoT hardware sensors with responsive application interfaces.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('safehaven', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- Lumeria Launch -->
+        <div class="achievement-card reveal" style="--stagger-index:2" data-achievement="lumeria">
+          <div class="achievement-header">
+            <div class="achievement-icon">🚀</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_Lumeria.jpg');" onclick="openGallery('lumeria', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/2_Lumeria.jpg');" onclick="openGallery('lumeria', 1)"></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Lumeria Production Launch &amp; A+ Grade</h4>
+            <p class="achievement-org">Delta University &amp; Google Play Store</p>
+            <p class="achievement-date">2026</p>
+            <p class="achievement-detail">Co-founded and engineered the mobile and AI pipeline for Lumeria, achieving the top academic grade (A+) and publishing the app live to the Google Play Store.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('lumeria', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- ITC 2023 -->
+        <div class="achievement-card reveal" style="--stagger-index:3" data-achievement="itc">
+          <div class="achievement-header">
+            <div class="achievement-icon">💡</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_Certificate%20ITC.jpg');" onclick="openGallery('itc', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/2_ITC.jpg');" onclick="openGallery('itc', 1)"></div>
+              <div class="thumbnail-more" onclick="openGallery('itc', 2)"><span>+2</span></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Project Presenter — Assistive Tech Prototype</h4>
+            <p class="achievement-org">IEEE ITC-Egypt 2023 — Air Defence College</p>
+            <p class="achievement-date">July 2023</p>
+            <p class="achievement-detail">Presented the 'Smart Electronic Walking Stick' prototype for visually impaired individuals, demonstrating obstacle detection hardware to industry professionals.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('itc', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- DEPI -->
+        <div class="achievement-card reveal" style="--stagger-index:4" data-achievement="depi">
+          <div class="achievement-header">
+            <div class="achievement-icon">🎓</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_DEPI.png');" onclick="openGallery('depi', 0)"></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Microsoft ML Engineer Trainee</h4>
+            <p class="achievement-org">Digital Egypt Pioneers Initiative (DEPI)</p>
+            <p class="achievement-date">2026 – Present</p>
+            <p class="achievement-detail">Selected for the selective national initiative to master scalable Azure AI solutions, enterprise LLMs, MLOps orchestration, and production vision models.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('depi', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- AI Pioneers / Presenter -->
+        <div class="achievement-card reveal" style="--stagger-index:5" data-achievement="presenter">
+          <div class="achievement-header">
+            <div class="achievement-icon">🎙️</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_Presenter.jpg');" onclick="openGallery('presenter', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/2_Presenter_Certificate%20AI%20Pioneers.jpg');" onclick="openGallery('presenter', 1)"></div>
+              <div class="thumbnail-more" onclick="openGallery('presenter', 2)"><span>+4</span></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Head of Voice Over &amp; Official Presenter</h4>
+            <p class="achievement-org">AI Pioneers &amp; Delta University Summits</p>
+            <p class="achievement-date">2025 – 2026</p>
+            <p class="achievement-detail">Official stage host for major faculty summits (Job Fair &amp; AI Scientific Day) and production lead for official audio and induction media releases.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('presenter', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- GDG -->
+        <div class="achievement-card reveal" style="--stagger-index:6" data-achievement="gdg">
+          <div class="achievement-header">
+            <div class="achievement-icon">✍️</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_GDG.jpg');" onclick="openGallery('gdg', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/2_GDG.jpeg');" onclick="openGallery('gdg', 1)"></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Technical Content Writer</h4>
+            <p class="achievement-org">Google Developer Groups (GDG) on Campus</p>
+            <p class="achievement-date">2023 – 2026</p>
+            <p class="achievement-detail">Authored technical guides and simplified machine learning concepts for developer communities, promoting digital literacy and tech awareness.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('gdg', 0)">
+              <i class="fas fa-images"></i> View Photos
+            </button>
+          </div>
+        </div>
+
+        <!-- ITI AI Intensive Training -->
+        <div class="achievement-card reveal" style="--stagger-index:7" data-achievement="iti">
+          <div class="achievement-header">
+            <div class="achievement-icon">⚡</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_Certificate%20ITI%20%E2%80%93%20Internship%20Program.jpg');" onclick="openGallery('iti', 0)"></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Artificial Intelligence Trainee</h4>
+            <p class="achievement-org">Information Technology Institute (ITI)</p>
+            <p class="achievement-date">August 2025</p>
+            <p class="achievement-detail">Completed an intensive 90-hour specialized training covering end-to-end Machine Learning pipelines, capped with an 18-hour applied mathematics and AI capstone project.</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('iti', 0)">
+              <i class="fas fa-images"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Professional Credentials -->
+        <div class="achievement-card reveal" style="--stagger-index:8" data-achievement="certs">
+          <div class="achievement-header">
+            <div class="achievement-icon">📜</div>
+            <div class="achievement-thumbnails">
+              <div class="thumbnail" style="background-image: url('images/achievements/1_Coursera%20AFGKDZQ382J4.jpg');" onclick="openGallery('certs', 0)"></div>
+              <div class="thumbnail" style="background-image: url('images/achievements/2_Coursera%20EU97L9WTB973.jpg');" onclick="openGallery('certs', 1)"></div>
+              <div class="thumbnail-more" onclick="openGallery('certs', 2)"><span>+5</span></div>
+            </div>
+          </div>
+          <div class="achievement-content">
+            <h4>Professional Credentials</h4>
+            <p class="achievement-org">Coursera | CIB | Elevvo</p>
+            <p class="achievement-date">2022 – 2026</p>
+            <p class="achievement-detail">Mathematics for Machine Learning: Linear Algebra (Imperial College London) &bull; Algebra and Differential Calculus for Data Science (CU Boulder) &bull; CIB &amp; SAS Digital Transformation &bull; Elevvo Applied ML Track</p>
+            <button type="button" class="btn-view-gallery" onclick="openGallery('certs', 0)">
+              <i class="fas fa-images"></i> View Certificates
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. Testimonials Section ==================== -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Testimonials &amp; Feedback</h2>
+      <p class="section-subtitle">Endorsements from project collaborators, technical peers, and academic mentors.</p>
+
+      <div class="testimonials-grid stagger-children">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card linkedin-testimonial reveal" style="--stagger-index:0">
+          <img src="images/testimonials/linkedin-dr-dina.png" alt="LinkedIn Endorsement" loading="lazy">
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7376664927907946496/" target="_blank" rel="noopener noreferrer" class="view-original">
+            <i class="fab fa-linkedin"></i> View on LinkedIn
+          </a>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card linkedin-testimonial reveal" style="--stagger-index:1">
+          <img src="images/testimonials/linkedin-shady.png" alt="LinkedIn Endorsement" loading="lazy">
+          <a href="https://www.linkedin.com/posts/merna-abass_safehaven-smartcare-eldercare-activity-7287516349126365185-TJFj/" target="_blank" rel="noopener noreferrer" class="view-original">
+            <i class="fab fa-linkedin"></i> View on LinkedIn
+          </a>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card linkedin-testimonial reveal" style="--stagger-index:2">
+          <img src="images/testimonials/linkedin-doaa.png" alt="LinkedIn Endorsement" loading="lazy">
+          <a href="https://www.linkedin.com/posts/merna-abass_safehaven-smartcare-eldercare-activity-7287516349126365185-TJFj/" target="_blank" rel="noopener noreferrer" class="view-original">
+            <i class="fab fa-linkedin"></i> View on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. Contact Section ==================== -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title contact-title">Contact Me</h2>
+
+      <!-- Form Messages -->
+      <div class="form-message success" id="successMsg">
+        <i class="fa-regular fa-circle-check"></i>
+        <span>Message sent successfully!</span>
+      </div>
+      <div class="form-message error" id="errorMsg">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>Something went wrong. Please try again.</span>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-form-wrapper">
+          <h3>Send Direct Message</h3>
+          <p>Have an AI opportunity or cross-platform application in mind? Drop me a line!</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" name="from_name" required autocomplete="name" />
+              <label>Full Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" name="from_email" required autocomplete="email" />
+              <label>Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" required autocomplete="off" />
+              <label>Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea name="message" required autocomplete="off"></textarea>
+              <label>Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span id="btnText">Send Message</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info-side">
+          <div class="contact-info-card">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="ci-text">
+              <p>Email</p>
+              <a href="mailto:mernaabass@outlook.com">mernaabass@outlook.com</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="ci-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="ci-text">
+              <p>Phone</p>
+              <a href="tel:+201113049943">+20-111-304-9943</a>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="ci-text">
+              <p>Location</p>
+              <span>Cairo, Egypt</span>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://www.linkedin.com/in/merna-abass" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/mernaabass" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+
+          <div class="availability-badge">
+            <div class="pulse"></div>
+            <div class="badge-text">
+            Open to AI Engineering &amp; Cross-Platform App roles
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Gallery Lightbox Modal ==================== -->
+  <div id="galleryModal" class="gallery-modal">
+    <div class="modal-overlay" onclick="closeGallery(event)"></div>
+    <div class="modal-content">
+      <button type="button" class="modal-close" onclick="closeGallery(event)" aria-label="Close gallery">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="gallery-container">
+        <img id="galleryImage" src="" alt="Achievement Image" />
+      </div>
+      <button type="button" class="gallery-nav prev" onclick="prevImage()" aria-label="Previous image">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button type="button" class="gallery-nav next" onclick="nextImage()" aria-label="Next image">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+      <div class="gallery-counter">
+        <span id="currentImage">1</span> / <span id="totalImages">1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Footer ==================== -->
+  <footer>
+    <div class="footer-container">
+      <div class="copyright">
+        <p>&copy; 2026 <a href="#hero">Merna Khaled Abass</a>. All rights reserved.</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/merna-abass" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/mernaabass" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:mernaabass@outlook.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== Scripts ==================== -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

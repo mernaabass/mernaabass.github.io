@@ -1,0 +1,10 @@
+{
+  "name": "Merna Abass | AI Engineer",
+  "short_name": "MA Portfolio",
+  "icons": [
+    { "src": "images/logo.png", "sizes": "1219x744", "type": "image/png" }
+  ],
+  "theme_color": "#071c24",
+  "background_color": "#071c24",
+  "display": "standalone"
+}
