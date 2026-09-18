@@ -103,7 +103,7 @@
   });
   // Also handle resize (covers desktop ↔ mobile breakpoint transitions)
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 768 && isMobileMenuOpen()) closeNav();
+    if (window.innerWidth > 1024 && isMobileMenuOpen()) closeNav();
   });
 
   // Attach click handlers to ALL nav links (both <ul> links and CTA button)
