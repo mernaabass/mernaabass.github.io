@@ -27,7 +27,8 @@
   window.addEventListener("load", () => {
     setTimeout(() => {
       loader.classList.add("hidden");
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "";
+      document.body.style.overflowX = "hidden";
     }, 800);
   });
 
@@ -53,33 +54,45 @@
     burgerIcon.classList.remove("active");
     navMenu.classList.remove("active");
     navOverlay.classList.remove("active");
+    document.body.style.overflow = "";
   }
 
   /**
    * Navigate to a section by its hash (e.g. "#about").
-   * On mobile: close menu first, then scroll after a brief delay
-   * so the layout settles before computing scroll position.
+   * Takes fixed header height into account so section titles aren't obscured.
    */
   function navigateToSection(hash) {
     const targetId = hash.replace("#", "");
     const targetEl = document.getElementById(targetId);
     if (!targetEl) return;
 
+    function doScroll() {
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 70;
+      const targetY = targetEl.getBoundingClientRect().top + window.scrollY - headerHeight - 15;
+      window.scrollTo({
+        top: Math.max(0, targetY),
+        behavior: "smooth"
+      });
+    }
+
     if (isMobileMenuOpen()) {
       closeNav();
-      // Wait for menu close transition to finish, then scroll
-      setTimeout(() => {
-        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 350);
+      setTimeout(doScroll, 200);
     } else {
-      targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      doScroll();
     }
   }
 
   burgerIcon.addEventListener("click", () => {
-    burgerIcon.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    navOverlay.classList.toggle("active");
+    const open = burgerIcon.classList.toggle("active");
+    navMenu.classList.toggle("active", open);
+    navOverlay.classList.toggle("active", open);
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   });
 
   navOverlay.addEventListener("click", closeNav);
